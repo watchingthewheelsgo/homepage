@@ -5,6 +5,7 @@ import { Inter, Manrope } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import { cx } from "~/utils";
 import Header from "./_components/header";
+import Footer from "./_components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <TRPCReactProvider>
           <Header/>
           {children}
+          <Footer />
         </TRPCReactProvider>
       </body>
     </html>

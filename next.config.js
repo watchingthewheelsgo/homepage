@@ -2,12 +2,10 @@
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
  * for Docker builds.
  */
-await import("./src/env.js");
-import { withContentlayer } from 'next-contentlayer'
-
+// await import("./src/env.js");
+const { withContentlayer } = require('next-contentlayer')
 
 /** @type {import("next").NextConfig} */
 const config = {};
 
-
-export default withContentlayer(config)
+module.exports = withContentlayer(config);
